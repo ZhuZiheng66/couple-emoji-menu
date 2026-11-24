@@ -47,6 +47,9 @@
           { id: "ignore", name: "不想理你", desc: "但是你来哄我，我还是会理你的。", emoji: "🙄", image: sticker(5) },
           { id: "block", name: "别拉黑我", desc: "我知道错啦，给我一次机会嘛。", emoji: "🥺", image: sticker(6) },
           { id: "hug", name: "抱抱", desc: "先抱一下，其他的慢慢说。", emoji: "🫂", image: sticker(1) }
+        ]},
+        { id: "for-66", name: "给66的专属", items: [
+          { id: "miss-you-66", name: "想你陪陪我", desc: "你不在身边的时候，我就看看它。", emoji: "🐶", image: "stickers/dog-66.jpg" }
         ]}
       ]
     };
@@ -63,6 +66,9 @@
           if (category.name === "招牌心意") category.name = "OvO";
           if (category.name === "甜甜收尾") category.name = "小情绪";
           category.items = (category.items || []).map(item => legacyItems[item.id] ? { ...legacyItems[item.id] } : item);
+        }
+        if (!(saved.categories || []).some(category => category.id === "for-66")) {
+          saved.categories.push(structuredClone(starter.categories.find(category => category.id === "for-66")));
         }
         return saved;
       } catch { return structuredClone(starter); }
