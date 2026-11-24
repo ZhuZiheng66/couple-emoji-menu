@@ -1,0 +1,5 @@
+*.mp4
+frames/
+reference-frames/
+*-contact.jpg
+contact-sheet.jpg

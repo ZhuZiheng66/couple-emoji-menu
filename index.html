@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f8f1">
+  <title>我们的小厨房 · 情侣菜单</title>
+  <style>
+    :root{--ink:#26332d;--muted:#78847b;--paper:#f5f8f1;--white:#fffefa;--line:#e5e9df;--green:#527b61;--green-dark:#355d46;--mint:#e4efe5;--coral:#df8067;--gold:#d3a84d;--shadow:0 14px 40px #26332d0d;--serif:"STSong","Songti SC",Georgia,serif}
+    *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,"Microsoft YaHei",sans-serif}button,input,textarea,select{font:inherit}button{cursor:pointer}img{display:block;max-width:100%}.shell{max-width:1160px;margin:auto;padding:0 28px 64px}.topbar{height:76px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}.brand{display:flex;align-items:center;gap:11px;font-family:var(--serif);font-size:19px;font-weight:700}.brand-mark{height:34px;width:34px;border-radius:50%;display:grid;place-items:center;background:#dce9dc;font-size:18px}.top-actions{display:flex;gap:10px;align-items:center}.icon-btn,.outline-btn,.solid-btn{border:1px solid var(--line);background:var(--white);color:var(--ink);border-radius:6px;padding:10px 14px;font-size:13px}.solid-btn{background:var(--green);border-color:var(--green);color:#fff}.solid-btn:hover{background:var(--green-dark)}.outline-btn:hover,.icon-btn:hover{border-color:#a9b9aa}.hero{margin:26px 0 22px;height:270px;border-radius:9px;overflow:hidden;position:relative;background:#c9ddd0}.hero img{width:100%;height:100%;object-fit:cover;filter:brightness(.72)}.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#17251ed1,transparent 82%)}.hero-copy{position:absolute;z-index:1;inset:0;display:flex;flex-direction:column;justify-content:center;padding:36px 46px;color:white}.eyebrow{font-size:11px;letter-spacing:0;color:#e2ede2}.hero h1{font-family:var(--serif);font-size:34px;font-weight:600;margin:9px 0}.hero p{font-size:13px;color:#e5eee6;margin:0}.hero-tag{position:absolute;z-index:2;right:26px;bottom:20px;border:1px solid #ffffff77;color:white;border-radius:3px;padding:7px 10px;font-size:11px}.content{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:32px;align-items:start}.menu-head{display:flex;justify-content:space-between;align-items:center;margin:22px 0 18px}.menu-head h2{margin:0;font:600 23px var(--serif)}.subhead{color:var(--muted);font-size:12px;margin-top:5px}.tabs{display:flex;gap:6px;border-bottom:1px solid var(--line);overflow:auto;scrollbar-width:none}.tab{flex:none;background:none;border:0;color:var(--muted);padding:12px 14px;font-size:13px;border-bottom:2px solid transparent}.tab.active{color:var(--green-dark);border-color:var(--green);font-weight:600}.section-title{display:flex;align-items:center;gap:8px;margin:24px 0 13px;font-size:14px}.section-title:before{content:"";height:14px;width:3px;background:var(--coral);border-radius:3px}.dish-list{display:grid;gap:10px}.dish{display:grid;grid-template-columns:94px minmax(0,1fr) auto;gap:15px;align-items:center;padding:12px;background:var(--white);border:1px solid var(--line);border-radius:7px}.dish img,.dish-art{height:84px;width:94px;object-fit:cover;border-radius:4px;background:#edf1e8}.dish-art{display:grid;place-items:center;font-size:34px}.dish h3{font-size:14px;margin:0 0 6px}.dish p{font-size:11px;line-height:1.65;color:var(--muted);margin:0;max-width:390px}.price{color:var(--coral);font-weight:650;font-size:14px;margin-top:8px}.add-btn{border:1px solid #a9bda9;background:#fff;border-radius:50%;width:32px;height:32px;color:var(--green-dark);font-size:21px;line-height:1}.qty{display:flex;align-items:center;gap:10px;font-size:13px}.qty button{border:0;border-radius:50%;width:27px;height:27px;background:var(--mint);color:var(--green-dark);font-size:17px}.sidebar{position:sticky;top:20px;background:var(--white);border:1px solid var(--line);border-radius:7px;overflow:hidden;margin-top:18px}.side-cover{height:126px;position:relative}.side-cover img{width:100%;height:100%;object-fit:cover;filter:brightness(.76)}.side-cover span{position:absolute;inset:auto 15px 13px;color:white;font:600 18px var(--serif)}.side-body{padding:17px}.side-top{display:flex;justify-content:space-between;align-items:center;font-size:13px;font-weight:600;padding-bottom:13px;border-bottom:1px solid var(--line)}.side-top small{font-size:11px;color:var(--muted);font-weight:400}.cart-list{min-height:90px;max-height:255px;overflow:auto}.empty{color:#929b91;font-size:12px;text-align:center;padding:30px 5px}.cart-row{display:flex;justify-content:space-between;gap:10px;padding:11px 0;border-bottom:1px solid #eef0e9;font-size:12px}.cart-row span:last-child{white-space:nowrap}.order-note{resize:vertical;width:100%;min-height:55px;border:1px solid var(--line);border-radius:5px;padding:9px;font-size:11px;background:#fffefa;margin-top:10px}.total-line{display:flex;justify-content:space-between;align-items:center;margin:15px 0;font-size:12px}.total-line strong{font-size:19px;color:var(--coral)}.submit{width:100%;padding:12px}.micro{color:#9ba399;font-size:10px;text-align:center;margin:10px 0 0}.owner{display:flex;justify-content:center;margin:22px 0}.text-btn{border:0;background:none;color:var(--green-dark);font-size:12px;text-decoration:underline;text-underline-offset:3px}.notice{position:fixed;left:50%;bottom:22px;transform:translate(-50%,20px);opacity:0;pointer-events:none;background:#26332d;color:white;padding:11px 16px;border-radius:5px;font-size:12px;transition:.2s;z-index:20}.notice.show{opacity:1;transform:translate(-50%,0)}.modal-backdrop{position:fixed;inset:0;background:#18231d88;z-index:10;display:none;align-items:center;justify-content:center;padding:18px}.modal-backdrop.open{display:flex}.modal{width:min(520px,100%);max-height:90vh;overflow:auto;background:var(--white);border-radius:8px;padding:22px}.modal-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}.modal-head h2{font:600 21px var(--serif);margin:0}.close{border:0;background:none;font-size:22px;color:var(--muted)}.field{display:grid;gap:6px;margin-bottom:13px}.field label{font-size:11px;color:var(--muted)}.field input,.field textarea,.field select{width:100%;padding:10px;border:1px solid var(--line);border-radius:5px;background:#fffefa;font-size:13px}.field textarea{resize:vertical;min-height:60px}.admin-list{display:grid;gap:8px;margin:10px 0 18px}.admin-row{display:flex;align-items:center;justify-content:space-between;padding:9px 10px;background:#f2f5ee;border-radius:4px;font-size:12px}.admin-row button{border:0;background:none;color:#b25d4a}.modal-actions{display:flex;justify-content:flex-end;gap:8px;margin-top:16px}.mobile-hint{display:none}
+    @media(max-width:760px){.shell{padding:0 16px 34px}.topbar{height:60px}.brand{font-size:16px}.hero{height:210px;margin-top:16px}.hero-copy{padding:24px}.hero h1{font-size:28px}.hero-tag{right:14px;bottom:12px}.content{grid-template-columns:1fr;gap:12px}.menu-head{margin-top:16px}.sidebar{position:relative;top:auto;grid-row:1;margin-top:2px}.side-cover{height:100px}.side-body{padding:13px}.cart-list{max-height:140px;min-height:42px}.dish{grid-template-columns:72px minmax(0,1fr) auto;gap:10px;padding:9px}.dish img,.dish-art{width:72px;height:72px}.dish p{font-size:10px}.dish h3{font-size:13px}.menu-head h2{font-size:21px}.mobile-hint{display:inline;color:var(--muted);font-size:10px}.top-actions .outline-btn{padding:8px 10px}.owner{margin-top:14px}}
+    @media(max-width:380px){.shell{padding-left:12px;padding-right:12px}.dish{grid-template-columns:62px minmax(0,1fr) auto;gap:8px}.dish img,.dish-art{width:62px;height:66px}.icon-btn{padding:8px}.hero h1{font-size:25px}}
+    :root{--ink:#282532;--muted:#8c8895;--paper:#faf9fc;--white:#fff;--line:#eeeaf2;--green:#8569a8;--green-dark:#6f548f;--mint:#f0eafa;--coral:#8668aa;--gold:#edbf54}
+    body{background:#faf9fc}.shell{max-width:900px;padding-bottom:120px}.topbar{height:62px}.brand{font-family:Inter,"Microsoft YaHei",sans-serif;font-size:15px}.brand-mark{color:#785d9b;background:#f0eafa}.hero{height:auto;margin:10px 0 12px;background:transparent;overflow:visible}.hero img,.hero:after,.hero-tag{display:none}.hero-copy{position:static;padding:8px 0;color:var(--ink)}.eyebrow{color:#9b8da9}.hero h1{font:600 23px Inter,"Microsoft YaHei",sans-serif;margin:5px 0}.hero p{color:var(--muted);font-size:12px}.content{display:block}.menu-head{margin:14px 0 15px 128px}.menu-head h2{font:600 16px Inter,"Microsoft YaHei",sans-serif}.subhead{font-size:11px}.tabs{position:fixed;z-index:2;left:max(10px,calc((100vw - 900px)/2));top:169px;width:112px;max-height:calc(100vh - 290px);overflow:auto;display:flex;flex-direction:column;align-items:stretch;gap:3px;border:0;background:#faf9fc}.tab{text-align:left;padding:12px 10px;border:0;border-left:3px solid transparent;color:#76717e;font-size:13px}.tab.active{border:0;border-left:3px solid #8265a9;background:#f1edf6;color:#6f548f}.section-title{margin:18px 0 10px 128px;font-size:13px;color:var(--muted)}.section-title:before{display:none}.dish-list{gap:0;margin-left:128px}.dish{grid-template-columns:82px minmax(0,1fr) auto;gap:12px;padding:12px 0;border:0;border-bottom:1px solid #efedf1;border-radius:0;background:transparent}.dish img,.dish-art{height:78px;width:78px;border-radius:4px;background:#e4f4ef;object-fit:cover}.dish h3{font-size:14px;margin:0 0 7px;font-weight:600}.dish p{font-size:11px;color:#9a96a0;margin:0}.sticker-note{font-size:10px;color:#aaa4af;margin-top:7px}.add-btn{width:29px;height:29px;background:#8064a5;color:white;border:0;font-size:19px}.qty button{background:#f0eafa;color:#725693}.qty{gap:7px}.owner{margin:18px 0 18px 128px}.sidebar{position:fixed;z-index:5;bottom:0;left:0;right:0;top:auto;margin:0;border:0;border-top:1px solid #efedf2;border-radius:0;box-shadow:0 -5px 20px #3126400b;overflow:visible}.side-cover,.side-top,.order-note,.total-line,.micro{display:none}.side-body{max-width:900px;height:68px;margin:auto;padding:9px 14px;display:grid;grid-template-columns:minmax(0,1fr) auto auto;align-items:center;gap:10px}.cart-list{min-height:0;max-height:none;overflow:hidden;font-size:11px;color:var(--muted)}.cart-row{display:inline;border:0;padding:0 7px 0 0;font-size:11px}.cart-row span:last-child{display:none}.cart-list .empty{text-align:left;padding:0;font-size:11px}.random-btn{border:0;background:none;color:#8064a5;font-size:12px;padding:10px 4px;text-decoration:underline;text-underline-offset:3px}.submit{width:auto;min-width:76px;padding:10px 18px;border:0;border-radius:24px;background:#8064a5;font-size:13px}.submit:hover{background:#6f548f}.modal{border-radius:10px}.admin-row{background:#f6f3f8}.admin-row button{color:#8668aa}.field input,.field textarea,.field select{background:white}.badge{font-size:10px;color:#8a6cad;margin-top:7px}
+    @media(max-width:600px){.shell{padding:0 14px 100px}.topbar{height:56px}.top-actions{gap:6px}.top-actions .icon-btn,.top-actions .outline-btn{font-size:11px;padding:8px 10px}.hero{margin:8px 0}.hero h1{font-size:20px}.menu-head{margin:12px 0 13px 94px}.menu-head h2{font-size:15px}.tabs{left:0;top:154px;width:94px;max-height:calc(100vh - 260px);padding:0 6px}.tab{font-size:12px;padding:12px 7px}.section-title,.dish-list,.owner{margin-left:94px}.dish{grid-template-columns:66px minmax(0,1fr) auto;gap:9px;padding:11px 0}.dish img,.dish-art{width:64px;height:64px}.dish h3{font-size:13px}.dish p{font-size:10px}.side-body{height:64px;padding:8px 12px;grid-template-columns:minmax(0,1fr) auto auto;gap:8px}.random-btn{font-size:11px}.submit{min-width:66px;padding:9px 15px;font-size:12px}.owner{margin-top:15px}}
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar"><div class="brand"><span class="brand-mark">♡</span><span id="brandName">OvO</span></div><div class="top-actions"><button class="icon-btn" id="shareBtn" aria-label="分享菜单" title="分享菜单">↗ 分享</button><button class="outline-btn" id="manageBtn">管理</button></div></header>
+    <section class="hero"><div class="hero-copy"><span class="eyebrow">ONLY FOR YOU</span><h1 id="heroTitle">哄你开心的小把戏</h1><p id="heroSubtitle">挑一个表情包，我就知道你现在的心情。</p></div></section>
+    <main class="content"><section><div class="menu-head"><div><h2>今天想要哪一种回应？</h2><div class="subhead">选中表情包，发给那个懂你的人</div></div><div class="mobile-hint" id="dishCount">0 个</div></div><nav class="tabs" id="tabs"></nav><div id="dishList"></div><div class="owner"><button class="text-btn" id="editHouse">修改菜单名字和开场白</button></div></section>
+      <aside class="sidebar"><div class="side-body"><div class="cart-list" id="cartList"><div class="empty">还没有选表情</div></div><button class="random-btn" id="randomPick">随机选一个</button><button class="solid-btn submit" id="submitOrder">点菜</button></div></aside>
+    </main>
+  </div>
+  <div class="notice" id="notice" role="status"></div>
+  <div class="modal-backdrop" id="modalBackdrop"><section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal-head"><h2 id="modalTitle">菜单管理</h2><button class="close" id="closeModal" aria-label="关闭">×</button></div><div id="modalContent"></div></section></div>
+  <script>
+    const sticker = number => `stickers/sticker-${String(number).padStart(2, "0")}.jpg`;
+    const starter = {
+      name: "OvO", title: "哄你开心的小把戏", subtitle: "挑一个表情包，我就知道你现在的心情。",
+      categories: [
+        { id: "ovo", name: "OvO", items: [
+          { id: "kiss", name: "亲亲", desc: "给你一个亲亲，今天也要开心。", emoji: "😘", image: sticker(1) },
+          { id: "tease", name: "想被调戏", desc: "快来逗逗我嘛。", emoji: "🥺", image: sticker(2) },
+          { id: "make-up", name: "想和好但是不好意思说", desc: "给你一个台阶，下次还要牵手。", emoji: "🐱", image: sticker(3) },
+          { id: "reply", name: "理我嘛，回我消息嘛", desc: "我在等你回我哦。", emoji: "💌", image: sticker(4) }
+        ]},
+        { id: "feelings", name: "小情绪", items: [
+          { id: "sad", name: "不开心哄哄我", desc: "现在需要一个抱抱。", emoji: "🥹", image: sticker(5) },
+          { id: "wronged", name: "被冤枉了很委屈", desc: "先听我说完，再给我擦眼泪。", emoji: "😿", image: sticker(6) },
+          { id: "angry", name: "我真的生气啦，需要哄", desc: "哄好了就告诉你怎么哄好的。", emoji: "😤", image: sticker(7) },
+          { id: "praise", name: "想要夸夸", desc: "今天也有努力做一个可爱的人。", emoji: "🥰", image: sticker(8) },
+          { id: "happy", name: "开开心心", desc: "看到你就好开心。", emoji: "😊", image: sticker(9) }
+        ]},
+        { id: "upset", name: "不开心", items: [
+          { id: "ignore", name: "不想理你", desc: "但是你来哄我，我还是会理你的。", emoji: "🙄", image: sticker(5) },
+          { id: "block", name: "别拉黑我", desc: "我知道错啦，给我一次机会嘛。", emoji: "🥺", image: sticker(6) },
+          { id: "hug", name: "抱抱", desc: "先抱一下，其他的慢慢说。", emoji: "🫂", image: sticker(1) }
+        ]}
+      ]
+    };
+
+    const legacyItems = {
+      soup: starter.categories[0].items[0], rice: starter.categories[0].items[1],
+      cake: starter.categories[1].items[0], tea: starter.categories[1].items[1]
+    };
+    function loadMenu() {
+      try {
+        const saved = JSON.parse(localStorage.getItem("little-kitchen-menu"));
+        if (!saved) return structuredClone(starter);
+        for (const category of saved.categories || []) {
+          if (category.name === "招牌心意") category.name = "OvO";
+          if (category.name === "甜甜收尾") category.name = "小情绪";
+          category.items = (category.items || []).map(item => legacyItems[item.id] ? { ...legacyItems[item.id] } : item);
+        }
+        return saved;
+      } catch { return structuredClone(starter); }
+    }
+    let data = loadMenu();
+    let active = data.categories[0]?.id || "";
+    let cart = {};
+    try { cart = JSON.parse(localStorage.getItem("little-kitchen-cart") || "{}"); } catch { cart = {}; }
+    const $ = selector => document.querySelector(selector);
+    const save = () => localStorage.setItem("little-kitchen-menu", JSON.stringify(data));
+    const escapeHtml = value => String(value).replace(/[&<>"']/g, character => ({
+      "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
+    }[character]));
+
+    function toast(message) {
+      const notice = $("#notice");
+      notice.textContent = message;
+      notice.classList.add("show");
+      setTimeout(() => notice.classList.remove("show"), 2400);
+    }
+
+    function render() {
+      $("#brandName").textContent = data.name;
+      $("#heroTitle").textContent = data.title;
+      $("#heroSubtitle").textContent = data.subtitle;
+      $("#tabs").innerHTML = data.categories.map(category =>
+        `<button class="tab ${category.id === active ? "active" : ""}" data-category="${escapeHtml(category.id)}">${escapeHtml(category.name)}</button>`
+      ).join("");
+      $("#tabs").querySelectorAll("button").forEach(button => button.onclick = () => {
+        active = button.dataset.category;
+        render();
+      });
+
+      const category = data.categories.find(entry => entry.id === active);
+      $("#dishList").innerHTML = category ? `<h3 class="section-title">${escapeHtml(category.name)}</h3><div class="dish-list">${category.items.map(item => {
+        const quantity = cart[item.id] || 0;
+        const picture = item.image ? `<img src="${escapeHtml(item.image)}" alt="${escapeHtml(item.name)}" onerror="this.outerHTML='<div class=&quot;dish-art&quot;>${escapeHtml(item.emoji || "💜")}</div>'">` : `<div class="dish-art">${escapeHtml(item.emoji || "💜")}</div>`;
+        const controls = quantity
+          ? `<div class="qty"><button data-minus="${escapeHtml(item.id)}" aria-label="减少">−</button><span>${quantity}</span><button data-plus="${escapeHtml(item.id)}" aria-label="再选一个">+</button></div>`
+          : `<button class="add-btn" data-plus="${escapeHtml(item.id)}" aria-label="选这个表情">+</button>`;
+        return `<article class="dish">${picture}<div><h3>${escapeHtml(item.name)}</h3><p>${escapeHtml(item.desc)}</p><div class="sticker-note">♥ TA 专属表情</div></div>${controls}</article>`;
+      }).join("")}</div>` : '<div class="empty">还没有表情包，点管理添加一张</div>';
+
+      $("#dishList").querySelectorAll("[data-plus]").forEach(button => button.onclick = () => changeSelection(button.dataset.plus, 1));
+      $("#dishList").querySelectorAll("[data-minus]").forEach(button => button.onclick = () => changeSelection(button.dataset.minus, -1));
+      renderCart();
+    }
+
+    function changeSelection(id, amount) {
+      cart[id] = Math.max(0, (cart[id] || 0) + amount);
+      if (!cart[id]) delete cart[id];
+      localStorage.setItem("little-kitchen-cart", JSON.stringify(cart));
+      render();
+    }
+
+    function selectedItems() {
+      return data.categories.flatMap(category => category.items
+        .filter(item => cart[item.id])
+        .map(item => ({ ...item, quantity: cart[item.id] })));
+    }
+
+    function renderCart() {
+      const selected = selectedItems();
+      $("#cartList").innerHTML = selected.length
+        ? selected.map(item => `<div class="cart-row"><span>${escapeHtml(item.name)} × ${item.quantity}</span></div>`).join("")
+        : '<div class="empty">还没有选表情</div>';
+      $("#dishCount").textContent = `${data.categories.reduce((count, category) => count + category.items.length, 0)} 个`;
+      $("#submitOrder").textContent = selected.length ? `点菜 · ${selected.reduce((count, item) => count + item.quantity, 0)}` : "点菜";
+    }
+
+    const openModal = content => {
+      $("#modalContent").innerHTML = content;
+      $("#modalBackdrop").classList.add("open");
+    };
+    const closeModal = () => $("#modalBackdrop").classList.remove("open");
+    $("#closeModal").onclick = closeModal;
+    $("#modalBackdrop").onclick = event => { if (event.target === $("#modalBackdrop")) closeModal(); };
+
+    function manageMenu() {
+      openModal(`<div class="admin-list">${data.categories.map(category =>
+        `<div class="admin-row"><span>${escapeHtml(category.name)} · ${category.items.length} 个表情</span><button data-delete-category="${escapeHtml(category.id)}">删除分组</button></div>`
+      ).join("") || "<p class='subhead'>还没有分组</p>"}</div>
+      <div class="field"><label>新分组名称</label><input id="newCategory" placeholder="例如：求抱抱"></div>
+      <button class="outline-btn" id="addCategory">＋ 添加分组</button>
+      <hr style="border:0;border-top:1px solid var(--line);margin:18px 0">
+      <div class="field"><label>添加到分组</label><select id="itemCategory">${data.categories.map(category => `<option value="${escapeHtml(category.id)}">${escapeHtml(category.name)}</option>`).join("")}</select></div>
+      <div class="field"><label>表情包名字</label><input id="itemName" placeholder="例如：给我一个抱抱"></div>
+      <div class="field"><label>配一句话</label><input id="itemDesc" placeholder="例如：现在需要一个抱抱"></div>
+      <div class="field"><label>小图标（没有图片时显示）</label><input id="itemEmoji" value="🥺" maxlength="4"></div>
+      <div class="field"><label>表情包图片</label><input id="itemImage" type="file" accept="image/*"></div>
+      <button class="solid-btn" id="addItem">加入表情菜单</button>
+      <hr style="border:0;border-top:1px solid var(--line);margin:18px 0">
+      <button class="text-btn" id="houseSettings">修改菜单名字和开场白</button>`);
+
+      $("#addCategory").onclick = () => {
+        const name = $("#newCategory").value.trim();
+        if (!name) return toast("先写一个分组名字");
+        const category = { id: `category-${Date.now()}`, name, items: [] };
+        data.categories.push(category);
+        active = category.id;
+        save(); render(); manageMenu();
+      };
+      $("#modalContent").querySelectorAll("[data-delete-category]").forEach(button => button.onclick = () => {
+        const removed = data.categories.find(category => category.id === button.dataset.deleteCategory);
+        data.categories = data.categories.filter(category => category.id !== button.dataset.deleteCategory);
+        removed?.items.forEach(item => delete cart[item.id]);
+        active = data.categories[0]?.id || "";
+        save(); render(); manageMenu();
+      });
+      $("#addItem").onclick = async () => {
+        const category = data.categories.find(entry => entry.id === $("#itemCategory").value);
+        const name = $("#itemName").value.trim();
+        if (!category || !name) return toast("写上表情包名字并选择分组");
+        const file = $("#itemImage").files[0];
+        let image = "";
+        if (file) image = await new Promise((resolve, reject) => {
+          const source = new Image();
+          const url = URL.createObjectURL(file);
+          source.onload = () => {
+            const scale = Math.min(1, 900 / Math.max(source.width, source.height));
+            const canvas = document.createElement("canvas");
+            canvas.width = Math.round(source.width * scale);
+            canvas.height = Math.round(source.height * scale);
+            canvas.getContext("2d").drawImage(source, 0, 0, canvas.width, canvas.height);
+            URL.revokeObjectURL(url);
+            resolve(canvas.toDataURL("image/jpeg", 0.78));
+          };
+          source.onerror = () => { URL.revokeObjectURL(url); reject(new Error("图片无法读取")); };
+          source.src = url;
+        });
+        const item = { id: `sticker-${Date.now()}`, name, desc: $("#itemDesc").value.trim(), emoji: $("#itemEmoji").value || "💜", image };
+        category.items.push(item);
+        active = category.id;
+        try { save(); } catch {
+          category.items.pop();
+          return toast("本地空间不够，换一张更小的图片试试");
+        }
+        render(); manageMenu(); toast("表情包加进菜单啦");
+      };
+      $("#houseSettings").onclick = editMenuName;
+    }
+
+    function editMenuName() {
+      openModal(`<div class="field"><label>菜单名字</label><input id="houseName" value="${escapeHtml(data.name)}"></div>
+      <div class="field"><label>首页标题</label><input id="houseTitle" value="${escapeHtml(data.title)}"></div>
+      <div class="field"><label>给 TA 的开场白</label><textarea id="houseSubtitle">${escapeHtml(data.subtitle)}</textarea></div>
+      <div class="modal-actions"><button class="outline-btn" id="cancelHouse">返回</button><button class="solid-btn" id="saveHouse">保存</button></div>`);
+      $("#cancelHouse").onclick = manageMenu;
+      $("#saveHouse").onclick = () => {
+        data.name = $("#houseName").value.trim() || "OvO";
+        data.title = $("#houseTitle").value.trim() || "哄你开心的小把戏";
+        data.subtitle = $("#houseSubtitle").value.trim();
+        save(); render(); closeModal(); toast("菜单资料已更新");
+      };
+    }
+
+    function orderMessage() {
+      const chosen = selectedItems();
+      if (!chosen.length) return toast("先选一个想让 TA 看到的表情");
+      const summary = `${data.name} 的小情绪菜单\n${chosen.map(item => `${item.name}${item.quantity > 1 ? ` × ${item.quantity}` : ""}`).join("\n")}\n\n${$("#orderMessage").value.trim()}`;
+      return summary;
+    }
+
+    function openOrder() {
+      if (!selectedItems().length) return toast("先选一个想让 TA 看到的表情");
+      openModal(`<div class="field"><label>你选中的表情</label><textarea id="orderPreview" readonly>${escapeHtml(selectedItems().map(item => `${item.name}${item.quantity > 1 ? ` × ${item.quantity}` : ""}`).join("\n"))}</textarea></div>
+      <div class="field"><label>再给 TA 留一句话</label><textarea id="orderMessage" placeholder="比如：今天也想被你哄一下"></textarea></div>
+      <div class="modal-actions"><button class="outline-btn" id="cancelOrder">再看看</button><button class="solid-btn" id="sendOrder">发给 TA</button></div>`);
+      $("#cancelOrder").onclick = closeModal;
+      $("#sendOrder").onclick = async () => {
+        const message = orderMessage();
+        if (navigator.share) {
+          try { await navigator.share({ title: "给你的小情绪菜单", text: message }); closeModal(); }
+          catch { }
+        } else {
+          try { await navigator.clipboard.writeText(message); closeModal(); toast("表情点单已复制，发给 TA 吧"); }
+          catch { $("#orderPreview").value = message; $("#orderPreview").focus(); $("#orderPreview").select(); toast("选中上面的文字后复制发给 TA"); }
+        }
+      };
+    }
+
+    $("#manageBtn").onclick = manageMenu;
+    $("#editHouse").onclick = editMenuName;
+    $("#shareBtn").onclick = async () => {
+      if (navigator.share) {
+        try { await navigator.share({ title: data.name, text: "来看看我给你做的表情菜单", url: location.href }); } catch { }
+      } else {
+        try { await navigator.clipboard.writeText(location.href); toast("菜单链接已复制"); }
+        catch { toast("复制浏览器地址，发给 TA 就能打开菜单"); }
+      }
+    };
+    $("#randomPick").onclick = () => {
+      const available = data.categories.find(category => category.id === active)?.items || [];
+      if (!available.length) return toast("这个分组还没有表情包");
+      const item = available[Math.floor(Math.random() * available.length)];
+      changeSelection(item.id, 1);
+      toast(`随机选中：${item.name}`);
+    };
+    $("#submitOrder").onclick = openOrder;
+    render();
+  </script>
+</body>
+</html>
